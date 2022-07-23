@@ -1,20 +1,20 @@
 'use strict';
 
-let array = [];
-const count = Number(prompt('Введите кол-во элементов массива'));
+let arr = [];
+const counter = Number(prompt('Введите кол-во элементов массива'));
 const n = Number(prompt('Введите начало диапазона'));
-const m = Number(prompt('Введите окончание диапозона'));
+const max = Number(prompt('Введите окончание диапозона'));
 
 
 
-const randomArray = (count, n, m) => {
-	for (let i = 0; i < count; i++) {
-		array.push(Math.round(Math.random() * (m - n + 1) + n));
+const randomArra = (counter, n, max) => {
+	for (let i = 0; i < counter; i++) {
+		arr.push(Math.round(Math.random() * (max - n + 1) + n));
 	}
-	console.log(array)
-	return array;
+	console.log(arr)
+	return arr;
 }
 
 
-randomArray(count, n, m)
+randomArra(counter, n, max)
 

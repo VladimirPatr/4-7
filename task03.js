@@ -1,36 +1,35 @@
 'use strict';
 
-let array = [];
-const count = Number(prompt('Введите кол-во элементов массива'));
-const n = Number(prompt('Введите начало диапазона'));
-const m = Number(prompt('Введите окончание диапозона'));
+let arra = [];
+const coun = Number(prompt('Введите кол-во элементов массива'));
+const nach = Number(prompt('Введите начало диапазона'));
+const maxima = Number(prompt('Введите окончание диапозона'));
 const line = prompt('Введите нужное слово');
 
 
-const randomArray = (count, n, m, line) => {
+const randomArr = (coun, nach, maxima, line) => {
     let evenArray = [];
-	for (let i = 0; i < count; i++) {
-		array.push(Math.round(Math.random() * (m - n) + n));
+	for (let i = 0; i < coun; i++) {
+		arra.push(Math.round(Math.random() * (maxima - nach) + nach));
 	}
-    console.log(array);
 
     if (line === 'even') { 
-        let evenArray = array.map((num) => !(num%2 === 0)? num + 1 : num);
+        let evenArray = arra.map((num) => !(num%2 === 0)? num + 1 : num);
         console.log(evenArray);
         return evenArray;
     } 
     else if (line === 'odd') {
-        let evenArray = array.map((num) => (num%2 === 0)? num + 1 : num);
+        let evenArray = arra.map((num) => (num%2 === 0)? num + 1 : num);
         console.log(evenArray);
         return evenArray;
     } else {
-        console.log(array)
-	    return array;
+        console.log(arra)
+	    return arra;
     }
 
 	
 }
 
 
-randomArray(count, n, m, line)
+randomArr(coun, nach, maxima, line)
 
